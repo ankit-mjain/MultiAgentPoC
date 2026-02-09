@@ -1,0 +1,40 @@
+{
+  "name": "multiagentpoc",
+  "version": "0.1.0",
+  "description": "Self-hosted multi-agent AI system with Telegram Bot interface",
+  "private": true,
+  "workspaces": [
+    "packages/shared",
+    "packages/dispatcher",
+    "packages/finance-agent",
+    "packages/visa-agent"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "dev:dispatcher": "npm run dev --workspace=packages/dispatcher",
+    "dev:finance": "npm run dev --workspace=packages/finance-agent",
+    "dev:visa": "npm run dev --workspace=packages/visa-agent",
+    "lint": "eslint packages/*/src --ext .ts",
+    "clean": "rm -rf packages/*/dist node_modules packages/*/node_modules"
+  },
+  "keywords": [
+    "multi-agent",
+    "telegram-bot",
+    "gemini",
+    "ai",
+    "docker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+}

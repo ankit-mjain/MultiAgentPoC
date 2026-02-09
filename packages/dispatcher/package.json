@@ -1,0 +1,36 @@
+{
+  "name": "@multiagentpoc/dispatcher",
+  "version": "0.1.0",
+  "description": "Telegram bot dispatcher with routing, jobs queue, and circuit breaker",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "dispatcher",
+    "telegram",
+    "bot"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@multiagentpoc/shared": "^0.1.0",
+    "axios": "^1.6.5",
+    "better-sqlite3": "^9.3.0",
+    "node-cron": "^3.0.3",
+    "telegraf": "^4.15.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.9",
+    "@types/node": "^20.11.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/uuid": "^9.0.7",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
